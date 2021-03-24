@@ -7,7 +7,6 @@ import styles from './styles.module.scss'
 export default function SignButton () {
 
     const [session] = useSession()
-    console.log(session.user.name)
 
     return session ? (
         <button 
