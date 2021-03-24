@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
 export default function SignButton () {
 
     const [session] = useSession()
-    console.log(session)
+    console.log(session.user.name)
 
     return session ? (
         <button 
@@ -16,7 +16,7 @@ export default function SignButton () {
         onClick={ () => signOut()}
         >       
             <FaGithub color="#04d361"/>
-            Gyuu Neves
+            {session.user.name}
             <FiX color="#737380" className={styles.closeIcon}/>
         </button>
     ) : (
