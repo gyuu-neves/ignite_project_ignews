@@ -28,6 +28,7 @@
   
         p, ul {
             margin: 1.5rem 0;
+            list-style: none;
         }
   
         ul {
@@ -36,6 +37,18 @@
             li {
                 margin: 0.5rem 0;
             }
+        }
+
+        ul li::before {
+            background-color: var(--yellow-500);
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 2px;
+            height: 6px;
+            width: 6px;
+            margin-left: -1em;
         }
     }
 }
